@@ -1,0 +1,18 @@
+query GET_IDEAS_ALL{
+    getIdeas{
+        id,
+        category{
+            id
+            name
+            description
+        }
+        creationTimeUnix,
+        title
+        text
+        ideaItems{
+            id
+            ideaItemType
+            url
+        }
+    }
+}

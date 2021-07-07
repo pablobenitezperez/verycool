@@ -16,6 +16,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation group: 'com.graphql-java-kickstart', name: 'graphql-spring-boot-starter', version: '11.1.0'
+	implementation group: 'com.graphql-java-kickstart', name: 'graphql-spring-boot-starter-test', version: '11.1.0'
 	implementation group: 'com.graphql-java-kickstart', name: 'playground-spring-boot-starter', version: '11.1.0'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	runtimeOnly 'mysql:mysql-connector-java'

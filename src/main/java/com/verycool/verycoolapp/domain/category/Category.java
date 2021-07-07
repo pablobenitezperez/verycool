@@ -19,6 +19,10 @@ public class Category {
     @OneToOne(mappedBy = "category")
     private Idea idea;
 
+    public UUID getId() {
+        return id;
+    }
+
     private Category(){
         //Required by nHibernate
     }

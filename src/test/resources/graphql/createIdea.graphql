@@ -1,0 +1,17 @@
+mutation CREATE_IDEA{
+    createIdea(createIdeaRequestInput: {
+        title: "titulo",
+        text: "text",
+        idCategory: "5f3e1a9a-df01-11eb-9fe5-28f10e085055"
+    }) {
+        id,
+        category{
+            id
+            name
+            description
+        }
+        creationTimeUnix,
+        title,
+        text
+    }
+}
