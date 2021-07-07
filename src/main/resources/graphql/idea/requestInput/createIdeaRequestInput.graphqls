@@ -1,0 +1,4 @@
+input CreateIdeaRequestInput {
+    title: String!
+    text: String
+}

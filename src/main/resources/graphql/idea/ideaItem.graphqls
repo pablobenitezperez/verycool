@@ -1,0 +1,6 @@
+type IdeaItem {
+    id: ID!
+    #ideaItemId: ID!
+    ideaItemType: IdeaItemType!
+    url: String!
+}

@@ -1,0 +1,5 @@
+# All mutations available in GraphQl
+type Mutation{
+    createIdea(createIdeaRequestInput: CreateIdeaRequestInput!) : Idea!
+    addIdeaItem(addIdeaItemRequestInput: AddIdeaItemRequestInput!): Idea!
+}

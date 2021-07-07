@@ -1,0 +1,5 @@
+input AddIdeaItemRequestInput {
+    ideaId: ID!
+    url: String!
+    ideaItemType: IdeaItemType!
+}

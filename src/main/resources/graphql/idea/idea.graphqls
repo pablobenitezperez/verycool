@@ -1,0 +1,8 @@
+type Idea {
+    id: ID!
+    #ideaId: ID!
+    creationTimeUnix: Float!
+    title: String
+    text: String
+    ideaItems: [IdeaItem!]
+}

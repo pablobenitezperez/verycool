@@ -1,0 +1,5 @@
+# All queries available in GraphQl
+type Query {
+    getIdeas: [Idea!]
+    getIdeasPaged(first: Int!, after: String): IdeaConnection @connection (for: "Idea")
+}

@@ -1,0 +1,5 @@
+enum IdeaItemType {
+    Image,
+    Video,
+    Document
+}
