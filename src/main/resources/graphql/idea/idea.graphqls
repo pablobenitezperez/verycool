@@ -1,6 +1,6 @@
 type Idea {
     id: ID!
-    #ideaId: ID!
+    category: Category!
     creationTimeUnix: Float!
     title: String
     text: String

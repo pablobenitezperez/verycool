@@ -1,9 +1,12 @@
-package com.verycool.verycoolapp.application.idea;
+package com.verycool.verycoolapp.application.idea.input;
+
+import java.util.UUID;
 
 public class CreateIdeaInput {
 
     private String title;
     private String text;
+    private UUID idCategory;
 
     public void setTitle(String title) {
         this.title = title;
@@ -13,6 +16,8 @@ public class CreateIdeaInput {
         this.text = text;
     }
 
+    public void setIdCategory(UUID idCategory) { this.idCategory = idCategory; }
+
     public String getTitle() {
         return title;
     }
@@ -20,4 +25,6 @@ public class CreateIdeaInput {
     public String getText() {
         return text;
     }
+
+    public UUID getIdCategory() { return idCategory; }
 }

@@ -1,5 +1,9 @@
 package com.verycool.verycoolapp.application.idea;
 
+import com.verycool.verycoolapp.application.idea.input.AddIdeaItemInput;
+import com.verycool.verycoolapp.application.idea.input.CreateIdeaInput;
+import com.verycool.verycoolapp.domain.category.Category;
+import com.verycool.verycoolapp.domain.category.CategoryRepository;
 import com.verycool.verycoolapp.domain.idea.IdeaRepository;
 import com.verycool.verycoolapp.domain.idea.Idea;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,10 +20,12 @@ import java.util.stream.StreamSupport;
 public class IdeaService {
 
     private final IdeaRepository ideaRepository;
+    private final CategoryRepository categoryRepository;
 
     @Autowired
-    public IdeaService(IdeaRepository ideaRepository) {
+    public IdeaService(IdeaRepository ideaRepository, CategoryRepository categoryRepository) {
         this.ideaRepository = ideaRepository;
+        this.categoryRepository = categoryRepository;
     }
 
     public List<Idea> getAll() {
@@ -35,8 +41,11 @@ public class IdeaService {
     }
 
     public Idea create(CreateIdeaInput ideaInput){
+        Category category = categoryRepository.findById(ideaInput.getIdCategory())
+                .orElseThrow(()-> new EntityNotFoundException("Category not found"));
+
         //For entity, we don't use setters and use constructor instead in order to avoid Anemic Model
-        Idea idea = new Idea(ideaInput.getTitle(), ideaInput.getText());
+        Idea idea = new Idea(ideaInput.getTitle(), ideaInput.getText(), category);
 
         return ideaRepository.save(idea);
     }

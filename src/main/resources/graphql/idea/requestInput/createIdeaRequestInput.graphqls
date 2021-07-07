@@ -1,4 +1,5 @@
 input CreateIdeaRequestInput {
     title: String!
     text: String
+    idCategory: ID!
 }

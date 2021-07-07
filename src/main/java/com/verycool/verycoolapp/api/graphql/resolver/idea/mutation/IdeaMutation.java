@@ -2,11 +2,10 @@ package com.verycool.verycoolapp.api.graphql.resolver.idea.mutation;
 
 import com.verycool.verycoolapp.api.graphql.resolver.idea.requestInput.AddIdeaItemRequestInput;
 import com.verycool.verycoolapp.api.graphql.resolver.idea.requestInput.CreateIdeaRequestInput;
-import com.verycool.verycoolapp.application.idea.AddIdeaItemInput;
-import com.verycool.verycoolapp.application.idea.CreateIdeaInput;
+import com.verycool.verycoolapp.application.idea.input.AddIdeaItemInput;
+import com.verycool.verycoolapp.application.idea.input.CreateIdeaInput;
 import com.verycool.verycoolapp.application.idea.IdeaService;
 import com.verycool.verycoolapp.domain.idea.Idea;
-import com.verycool.verycoolapp.domain.idea.IdeaItem;
 import com.verycool.verycoolapp.domain.idea.IdeaItemType;
 import graphql.kickstart.tools.GraphQLMutationResolver;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,10 +27,12 @@ public class IdeaMutation implements GraphQLMutationResolver {
 
         String title = createIdeaRequestInput.getTitle();
         String text = createIdeaRequestInput.getText();
+        UUID idCategory = createIdeaRequestInput.getIdCategory();
 
         CreateIdeaInput ideaInput = new CreateIdeaInput();
         ideaInput.setText(text);
         ideaInput.setTitle(title);
+        ideaInput.setIdCategory(idCategory);
 
         return ideaService.create(ideaInput);
     }

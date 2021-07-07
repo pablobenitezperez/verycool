@@ -9,9 +9,6 @@ import java.util.UUID;
 @Entity
 public class IdeaItem {
 
-
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private long id;
     @Id
     @Type(type = "uuid-char")
     private UUID id;
@@ -19,8 +16,6 @@ public class IdeaItem {
     @ManyToOne
     @JoinColumn(name = "idea_id", nullable = false)
     private Idea idea;
-
-    //private Date creationTime;
 
     @Enumerated(EnumType.STRING)
     private IdeaItemType ideaItemType;

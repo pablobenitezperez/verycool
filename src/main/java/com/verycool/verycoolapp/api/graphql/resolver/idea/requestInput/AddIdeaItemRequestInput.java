@@ -14,6 +14,10 @@ public class AddIdeaItemRequestInput {
         return ideaId;
     }
 
+    public void setIdeaId(UUID ideaId) {
+        this.ideaId = ideaId;
+    }
+
     public String getUrl() {
         return url;
     }

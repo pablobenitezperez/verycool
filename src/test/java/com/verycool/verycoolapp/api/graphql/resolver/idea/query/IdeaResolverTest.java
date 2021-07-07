@@ -2,6 +2,7 @@ package com.verycool.verycoolapp.api.graphql.resolver.idea.query;
 
 import com.verycool.verycoolapp.api.graphql.connection.CursorUtil;
 import com.verycool.verycoolapp.application.idea.IdeaService;
+import com.verycool.verycoolapp.domain.category.Category;
 import com.verycool.verycoolapp.domain.idea.Idea;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -20,8 +21,8 @@ import static org.mockito.Mockito.when;
 
 class IdeaResolverTest {
 
-    private final Idea IDEA1 = new Idea("title1", "text1");
-    private final Idea IDEA2 = new Idea("title2", "text2");
+    private final Idea IDEA1 = new Idea("title1", "text1", new Category("name", "description"));
+    private final Idea IDEA2 = new Idea("title2", "text2", new Category("name", "description"));
 
 
     @InjectMocks
