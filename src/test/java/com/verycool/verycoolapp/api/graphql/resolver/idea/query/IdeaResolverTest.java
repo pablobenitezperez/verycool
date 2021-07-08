@@ -1,7 +1,7 @@
 package com.verycool.verycoolapp.api.graphql.resolver.idea.query;
 
 import com.verycool.verycoolapp.api.graphql.connection.CursorUtil;
-import com.verycool.verycoolapp.application.idea.IdeaService;
+import com.verycool.verycoolapp.application.service.idea.IdeaService;
 import com.verycool.verycoolapp.domain.category.Category;
 import com.verycool.verycoolapp.domain.idea.Idea;
 import org.junit.jupiter.api.BeforeEach;

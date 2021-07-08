@@ -2,7 +2,7 @@ package com.verycool.verycoolapp.api.graphql.resolver.idea.mutation;
 
 import com.verycool.verycoolapp.api.graphql.resolver.idea.requestInput.AddIdeaItemRequestInput;
 import com.verycool.verycoolapp.api.graphql.resolver.idea.requestInput.CreateIdeaRequestInput;
-import com.verycool.verycoolapp.application.idea.IdeaService;
+import com.verycool.verycoolapp.application.service.idea.IdeaService;
 import com.verycool.verycoolapp.domain.category.Category;
 import com.verycool.verycoolapp.domain.idea.Idea;
 import com.verycool.verycoolapp.domain.idea.IdeaItemType;

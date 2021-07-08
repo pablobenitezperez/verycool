@@ -1,4 +1,4 @@
-package com.verycool.verycoolapp.application.idea.input;
+package com.verycool.verycoolapp.application.service.idea.input;
 
 import com.verycool.verycoolapp.domain.idea.IdeaItemType;
 

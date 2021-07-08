@@ -1,7 +1,7 @@
-package com.verycool.verycoolapp.application.idea;
+package com.verycool.verycoolapp.application.service.idea;
 
-import com.verycool.verycoolapp.application.idea.input.AddIdeaItemInput;
-import com.verycool.verycoolapp.application.idea.input.CreateIdeaInput;
+import com.verycool.verycoolapp.application.service.idea.input.AddIdeaItemInput;
+import com.verycool.verycoolapp.application.service.idea.input.CreateIdeaInput;
 import com.verycool.verycoolapp.domain.category.Category;
 import com.verycool.verycoolapp.domain.category.CategoryRepository;
 import com.verycool.verycoolapp.domain.idea.Idea;

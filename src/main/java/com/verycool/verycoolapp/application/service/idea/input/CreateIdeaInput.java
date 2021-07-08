@@ -1,4 +1,4 @@
-package com.verycool.verycoolapp.application.idea.input;
+package com.verycool.verycoolapp.application.service.idea.input;
 
 import java.util.UUID;
 
